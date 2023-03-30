@@ -1,0 +1,27 @@
+#include <string.h>
+#include <stdlib.h>
+void p(int *a){
+   int *b = (int*)malloc(sizeof(int)*4);
+   memcpy(b, a, sizeof(int)*4);
+
+    //make changes to b.
+   b[0] = 6;
+   b[1] = 7;
+   b[2] = 8;
+   b[3] = 9;
+}
+
+int main(int argc, char **argv)
+{
+    int *a = (int*)malloc(sizeof(int)*4);
+
+    // add values to a
+    a[0] = 1;
+    a[1] = 2;
+    a[2] = 3;
+    a[3] = 4;
+
+    p(a);
+
+return 0;
+}
